@@ -4,6 +4,7 @@ import styles from './index.module.scss';
 import Head from 'next/head';
 import { getSortedPostsData } from '../../lib/posts';
 import Link from 'next/link';
+import WholeTechStack from '@/components/whole-tech-stack';
 
 /**
  * 开发环境下每次请求页面都会执行
@@ -30,21 +31,24 @@ export default function Home(props: { allPostsData: any[] }) {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd + ' ' + styles.container}>
-        <h3 className={'text-center font-thin'}>A Frontend Developer.</h3>
-        <h2>👋Hi there!</h2>
+        <h2 className={utilStyles.headingLg}>Hi there!</h2>
         <p>
-          I am Andrew Leung, currently interning at{' '}
+          I am Andrew Leung,
+          {' a Frontend Developer(at least for now)'}, currently interning at{' '}
           <a className={'font-bold'} href="https://www.baidu.com">
             Baidu
           </a>
           .
         </p>
         <p>
-          Now I am studying Frontend & Backend Technologies, target to be an
-          FSD.
+          Now I am studying Frontend & Backend Technologies, target to be a FSD
+          {'(Full Stack Developer)'}.
         </p>
-        <p></p>
         <p>This blog is written via Next.js, while I am studying Next.js.</p>
+      </section>
+      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+        <h2 className={utilStyles.headingLg}>Tech Stack</h2>
+        <WholeTechStack />
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>

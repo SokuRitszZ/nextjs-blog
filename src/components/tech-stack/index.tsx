@@ -7,5 +7,5 @@ export default function TechStack(
     return `https://skillicons.dev/icons?i=${props.techNames.join(',')}`;
   }, [props.techNames]);
 
-  return <img className={props.className} alt="" src={url} />;
+  return <img className={props.className + ' max-w-full'} alt="" src={url} />;
 }
