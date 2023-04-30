@@ -1,4 +1,4 @@
-@tailwind base;
+/* @tailwind base; */
 @tailwind components;
 @tailwind utilities;
 
@@ -6,6 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 240, 240, 240;
   --background-end-rgb: 240, 240, 240;
+  --font-family: ui-serif, Georgia;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -13,6 +14,7 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+    --font-family: ui-serif, Georgia;
   }
 }
 
@@ -24,4 +26,17 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  
+  font-family: var(--font-family);
+
+  line-height: 1.5em;
+}
+
+a {
+  color: #000;  
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
