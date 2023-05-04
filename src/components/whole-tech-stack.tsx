@@ -3,7 +3,7 @@ import TechStack from './tech-stack';
 export default function WholeTechStack() {
   return (
     <>
-      <p>
+      <div>
         <div> Language & Framework </div>
         <TechStack
           techNames={[
@@ -47,7 +47,7 @@ export default function WholeTechStack() {
         <TechStack techNames={['redis', 'docker']} />
         <div> Learning or To Learn</div>
         <TechStack techNames={['cpp', 'rust', 'rxjs', 'deno', 'graphql']} />
-      </p>
+      </div>
     </>
   );
 }
